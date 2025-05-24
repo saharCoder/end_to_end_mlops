@@ -1,7 +1,8 @@
-artifacts_root: artifacts
+#this yaml file better used in MLOps production level AI application as it supports reusability with different data and configuration but with the same code
+artifacts_root: artifacts #this is the root folder we gonna create named artifacts
 
-data_ingestion:
+data_ingestion: #this is the subfolder inside the artifacts folder
   root_dir: artifacts/data_ingestion
   source_URL: https://github.com/saharCoder/Data-Repo/raw/refs/heads/main/archive.zip
-  local_data_file: artifacts/data_ingestion/data.zip
-  unzip_dir: artifacts/data_ingestion
+  local_data_file: artifacts/data_ingestion/data.zip #Path where the downloaded file will be saved locally.
+  unzip_dir: artifacts/data_ingestion #here where the unzipped files gonna be stored
