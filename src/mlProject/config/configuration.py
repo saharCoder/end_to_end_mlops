@@ -1,6 +1,6 @@
 from src.mlProject.constants import *
 from src.mlProject.utils.common import read_yaml, create_directories
-from src.mlProject.entity.config_entity import (DataIngestionConfig, DataValidationConfig)
+from src.mlProject.entity.config_entity import (DataIngestionConfig, DataValidationConfig,DataTransformationConfig)
 
 class ConfigurationManager:
     def __init__(
@@ -41,5 +41,13 @@ class ConfigurationManager:
             STATUS_FILE=Path(config.STATUS_FILE),
             all_schema= schema
         )
-
+    
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+            config = self.config.data_transformation
+            create_directories([config.root_dir])
+            return DataTransformationConfig(
+                root_dir=Path(config.root_dir),
+                unzip_data_dir=Path(config.unzip_data_dir),
+                
+            )
     
