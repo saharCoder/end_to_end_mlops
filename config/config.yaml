@@ -6,3 +6,10 @@ data_ingestion: #this is the subfolder inside the artifacts folder
   source_URL: https://github.com/saharCoder/Data-Repo/raw/refs/heads/main/archive.zip
   local_data_file: artifacts/data_ingestion/data.zip #Path where the downloaded file will be saved locally.
   unzip_dir: artifacts/data_ingestion #here where the unzipped files gonna be stored
+
+
+
+data_validation:
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/email_phishing_data.csv 
+  STATUS_FILE: artifacts/data_validation/status.txt

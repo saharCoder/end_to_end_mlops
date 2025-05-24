@@ -1,1 +1,15 @@
-key: val
+COLUMNS:
+  num_words: int64       
+  num_unique_words: int64    
+  num_stopwords: int64       
+  num_links: int64         
+  num_unique_domains: int64  
+  num_email_addresses: int64  
+  num_spelling_errors: int64  
+  num_urgent_keywords: int64 
+  label: int64
+                  
+
+
+TARGET_COLUMN:
+  name: label
